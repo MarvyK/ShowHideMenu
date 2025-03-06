@@ -1,0 +1,44 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: aliceblue;
+}
+header {
+  background-color: aqua;
+}
+.flex-item {
+  flex: 1; /* Distribute available space equally */
+  padding: 20px; /* Add some padding for visual separation */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+.containers {
+  display: flex; /* Make the container a flex container */
+  width: 100%; /* Or a specific width */
+}
+.containers label::before {
+  content: ">>";
+}
+#show-hide-checkbox:checked + label::before {
+  content: "<<";
+}
+.sub-menu {
+  display: none;
+  max-width: 150px;
+  background-color: #f0f0f0; /* Optional: Add background color */
+}
+
+.content {
+  background-color: #e0e0e0; /* Optional: Add background color */
+}
+
+/*Show/hide*/
+#show-hide-checkbox {
+  /*hide the checkbox*/
+  display: none;
+}
+#show-hide-checkbox:checked ~ .sub-menu {
+  display: block; /* Show menu when checked */
+}
+
+#show-hide-checkbox + .sub-menu {
+  display: none; /* Hide menu when unchecked */
+}
