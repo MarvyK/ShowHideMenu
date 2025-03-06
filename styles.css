@@ -5,6 +5,7 @@ body {
 header {
   background-color: aqua;
 }
+
 .flex-item {
   flex: 1; /* Distribute available space equally */
   padding: 20px; /* Add some padding for visual separation */
@@ -15,10 +16,10 @@ header {
   width: 100%; /* Or a specific width */
 }
 .containers label::before {
-  content: ">>";
+  content: ">>"; /* Adds ">>" before the text of labels within elements with the class "containers" */
 }
 #show-hide-checkbox:checked + label::before {
-  content: "<<";
+  content: "<<"; /* When the checkbox with ID "show-hide-checkbox" is checked, this changes the content of the ::before pseudo-element of the label immediately following it to "<<" */
 }
 .sub-menu {
   display: none;
